@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: url("nmrec.jpeg");
+      background-size: cover;
+    }
+    .container {
+      margin-top: 100px;
+      background-color: #fff;
+      margin: 0 auto;
+      max-width: 450px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+    }
+    form {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center my-5">Sign Up</h1>
+    <form id="signup-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password">
+      </div>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+      <button type="button" class="btn btn-link" onclick="location.href='signin.html'">Already have an account? Sign in here.</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script>
+    $(function() {
+      $('#signup-form').submit(function(e) {
+        e.preventDefault();
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var password = $('#password').val();
+        var confirmPassword = $('#confirm-password').val();
+        if (!name) {
+          alert('Please enter your name.');
+        } else if (!email) {
+          alert('Please enter your email.');
+        } else if (!password) {
+          alert('Please enter a password.');
+        } else if (password !== confirmPassword) {
+          alert('Passwords do not match.');
+        } else {
+          // Submit the form
+          alert('Form submitted successfully!');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
