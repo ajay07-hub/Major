@@ -26,23 +26,23 @@
 <body>
   <div class="container">
     <h1 class="text-center my-5">Sign Up</h1>
-    <form id="signup-form">
+    <form id="signup-form" method="post" action="register.php">
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" placeholder="Enter name">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
       </div>
       <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Password">
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
       </div>
       <div class="form-group">
         <label for="confirm-password">Confirm Password</label>
-        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password">
+        <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
       </div>
       <button type="submit" class="btn btn-primary">Sign Up</button>
       <button type="button" class="btn btn-link" onclick="location.href='signin.html'">Already have an account? Sign in here.</button>
@@ -72,6 +72,4 @@
         }
       });
     });
-  </script>
-</body>
-</html>
+  </script
